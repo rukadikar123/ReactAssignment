@@ -1,4 +1,15 @@
-import * as React from "react"
+import * as React from "react";
+import { GrArticle } from "react-icons/gr";
+import { MdAutoAwesome } from "react-icons/md";
+import { RiLinksFill } from "react-icons/ri";
+import { IoLinkSharp } from "react-icons/io5";
+import { MdIntegrationInstructions } from "react-icons/md";
+import { MdSubscriptions } from "react-icons/md";
+import { TbAffiliate } from "react-icons/tb";
+import { IoIosHelpCircle } from "react-icons/io";
+import { MdTipsAndUpdates } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
+
 import {
   AudioWaveform,
   BookOpen,
@@ -10,19 +21,19 @@ import {
   PieChart,
   Settings2,
   SquareTerminal,
-} from "lucide-react"
+} from "lucide-react";
 
-import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
-import { NavUser } from "@/components/nav-user"
-import { TeamSwitcher } from "@/components/team-switcher"
+import { NavMain } from "@/components/nav-main";
+import { NavProjects } from "@/components/nav-projects";
+import { NavUser } from "@/components/nav-user";
+import { TeamSwitcher } from "@/components/team-switcher";
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
-} from "@/components/ui/sidebar"
+} from "@/components/ui/sidebar";
 
 // This is sample data.
 const data = {
@@ -33,7 +44,7 @@ const data = {
   },
   teams: [
     {
-      name: "Acme Inc",
+      name: "amazon.com",
       logo: GalleryVerticalEnd,
       plan: "Enterprise",
     },
@@ -50,124 +61,112 @@ const data = {
   ],
   navMain: [
     {
-      title: "Playground",
+      title: "Articles",
       url: "#",
-      icon: SquareTerminal,
+      icon: GrArticle,
       isActive: true,
       items: [
         {
-          title: "History",
+          title: "Create Article",
           url: "#",
         },
         {
-          title: "Starred",
+          title: "Generated Articles",
           url: "#",
         },
         {
-          title: "Settings",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Models",
-      url: "#",
-      icon: Bot,
-      items: [
-        {
-          title: "Genesis",
+          title: "Keyword projects",
           url: "#",
         },
         {
-          title: "Explorer",
+          title: "AI keyword to article",
           url: "#",
         },
         {
-          title: "Quantum",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
+          title: "Steal competitor Keyword",
           url: "#",
         },
         {
-          title: "Get Started",
+          title: "Import Keyword from GSC",
           url: "#",
         },
         {
-          title: "Tutorials",
+          title: "Manual Keyword to article",
           url: "#",
         },
         {
-          title: "Changelog",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "General",
+          title: "Longtail keyword to article",
           url: "#",
         },
         {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
+          title: "Article settings",
           url: "#",
         },
       ],
     },
   ],
-  projects: [
+  items: [
     {
-      name: "Design Engineering",
+      name: "Auto Blog",
       url: "#",
-      icon: Frame,
+      icon: MdAutoAwesome,
     },
     {
-      name: "Sales & Marketing",
+      name: "Internal Links",
       url: "#",
-      icon: PieChart,
+      icon: RiLinksFill,
     },
     {
-      name: "Travel",
+      name: "Free Backlinks",
       url: "#",
-      icon: Map,
+      icon: IoLinkSharp,
     },
+    {
+      name: "Integrations",
+      url: "#",
+      icon: MdIntegrationInstructions,
+    },
+    {
+      name: "Subscription",
+      url: "#",
+      icon: MdSubscriptions,
+    },
+    {
+      name: "Affiliate Programm",
+      url: "#",
+      icon: TbAffiliate,
+    },
+    {
+      name: "Help center",
+      url: "#",
+      icon: IoIosHelpCircle,
+    },
+    {
+      name: "Updates",
+      url: "#",
+      icon: MdTipsAndUpdates,
+    },
+    
   ],
-}
+};
 
-export function AppSidebar({
-  ...props
-}) {
+export function AppSidebar({ ...props }) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
+        <h1 className="text-4xl py-2 text-center font-extrabold">abun</h1>
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
+        <NavProjects items={data.items} />
       </SidebarContent>
-      <SidebarFooter>
-        <NavUser user={data.user} />
+      <hr />
+      <SidebarFooter >
+        <div className="flex gap-2 hover:cursor-pointer items-center">
+          <CgProfile className='text-blue-600' />
+          <p> Profile</p>
+        </div>
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
