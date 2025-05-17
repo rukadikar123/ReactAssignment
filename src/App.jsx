@@ -1,10 +1,9 @@
+import Page from "@/app/dashboard/Page";
 
 function App() {
-  return (
-   <>
-
-   </>
-  )
+  return <>
+     <Page/>
+    </>;
 }
 
-export default App
+export default App;
