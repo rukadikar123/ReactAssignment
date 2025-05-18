@@ -92,13 +92,13 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const schema = z.object({
-  id: z.number(),
-  header: z.string(),
-  type: z.string(),
-  status: z.string(),
-  target: z.string(),
-  limit: z.string(),
-  reviewer: z.string(),
+  articleId: z.number(),
+  title: z.string(),
+  category: z.string(),
+  words: z.string(),
+  createdOn: z.string(),
+  Action: z.string(),
+  publisher: z.string(),
 });
 
 // Create a separate component for the drag handle
@@ -125,7 +125,7 @@ const columns = [
   {
     id: "drag",
     header: () => null,
-    cell: ({ row }) => <DragHandle id={row.original.id} />,
+    cell: ({ row }) => <DragHandle id={row.original.articleId} />,
   },
   {
     id: "select",
@@ -154,70 +154,63 @@ const columns = [
     enableHiding: false,
   },
   {
-    accessorKey: "header",
+    accessorKey: "title", 
     header: "Article title",
-    cell: ({ row }) => {
-      return <TableCellViewer item={row.original} />;
-    },
+    cell: ({ row }) => <span>{row.original.title}</span>,
     enableHiding: false,
   },
   {
-    accessorKey: "type",
+    accessorKey: "category", 
     header: "Keyword [traffic]",
     cell: ({ row }) => (
       <div className="w-32">
-        {/* Example: show type and fake traffic */}
-        <span className="font-medium">{row.original.type}</span>
+        <span className="font-medium">{row.original.category}</span>
         <span className="ml-2 text-xs text-muted-foreground">[1200]</span>
       </div>
     ),
   },
-  {
-    accessorKey: "status",
+ {
+    accessorKey: "words",
     header: "Words",
     cell: ({ row }) => (
       <span>
-        {/* Example: show status and fake word count */}
-        {row.original.status}{" "}
-        <span className="ml-2 text-xs text-muted-foreground">
-          ({Math.floor(Math.random() * 1000) + 500}w)
-        </span>
+        {row.original.state} <span className="ml-2 text-xs text-muted-foreground">({Math.floor(Math.random() * 1000) + 500}w)</span>
       </span>
     ),
   },
-  {
-    accessorKey: "target",
+ {
+    accessorKey: "createdOn", // was "target"
     header: "Created on",
     cell: ({ row }) => (
       <span>
-        {new Date(2024, 4, row.original.id || 1).toLocaleDateString()}
+        {new Date(row.original.createdOn).toLocaleDateString()}
       </span>
     ),
   },
   {
-    accessorKey: "limit",
+    accessorKey: "Action", // was "limit"
     header: "Action",
     cell: () => (
-       <Button size="sm" variant="outline">
+      <Button size="sm" variant="outline">
         View
       </Button>
     ),
   },
-  {
-    accessorKey: "reviewer",
+   {
+    accessorKey: "publisher", // was "reviewer"
     header: "Publish",
-    cell: () => {
-      return <Button size="sm" variant="default">
+    cell: () => (
+      <Button size="sm" variant="default">
         Publish
       </Button>
-    },
+    ),
   },
   
 ];
 
 function DraggableRow({ row }) {
   const { transform, transition, setNodeRef, isDragging } = useSortable({
-    id: row.original.id,
+    id: row.original.articleId,
   });
 
   return (
@@ -257,7 +250,7 @@ export function DataTable({ data: initialData }) {
     useSensor(KeyboardSensor, {})
   );
 
-  const dataIds = React.useMemo(() => data?.map(({ id }) => id) || [], [data]);
+  const dataIds = React.useMemo(() => data?.map(({ articleId }) => articleId) || [], [data]);
 
   const table = useReactTable({
     data,
@@ -269,7 +262,7 @@ export function DataTable({ data: initialData }) {
       columnFilters,
       pagination,
     },
-    getRowId: (row) => row.id.toString(),
+    getRowId: (row) => row.articleId.toString(),
     enableRowSelection: true,
     onRowSelectionChange: setRowSelection,
     onSortingChange: setSorting,

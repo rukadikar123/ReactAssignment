@@ -10,16 +10,7 @@ import { IoIosHelpCircle } from "react-icons/io";
 import { MdTipsAndUpdates } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import {
-  AudioWaveform,
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
   GalleryVerticalEnd,
-  Map,
-  PieChart,
-  Settings2,
-  SquareTerminal,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -52,17 +43,17 @@ const data = {
   navMain: [
     {
       title: "Articles",
-      url: "#",
+      url: "articles",
       icon: GrArticle,
       isActive: true,
       items: [
         {
          title: "Create Article",
-          url: "#",
+          url: '#',
         },
         {
           title: "Generated Articles",
-          url: "#",
+          url: "generated-articles",
         },
         {
           title: "Keyword projects",
