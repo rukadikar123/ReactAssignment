@@ -163,9 +163,8 @@ const columns = [
     accessorKey: "category", 
     header: "Keyword [traffic]",
     cell: ({ row }) => (
-      <div className="w-32">
+      <div className="w-full">
         <span className="font-medium">{row.original.category}</span>
-        <span className="ml-2 text-xs text-muted-foreground">[1200]</span>
       </div>
     ),
   },
@@ -174,34 +173,34 @@ const columns = [
     header: "Words",
     cell: ({ row }) => (
       <span>
-        {row.original.state} <span className="ml-2 text-xs text-muted-foreground">({Math.floor(Math.random() * 1000) + 500}w)</span>
+        {row.original.words} 
       </span>
     ),
   },
  {
-    accessorKey: "createdOn", // was "target"
+    accessorKey: "createdOn", 
     header: "Created on",
     cell: ({ row }) => (
       <span>
-        {new Date(row.original.createdOn).toLocaleDateString()}
+        {row.original.createdOn}
       </span>
     ),
   },
   {
-    accessorKey: "Action", // was "limit"
+    accessorKey: "Action", 
     header: "Action",
-    cell: () => (
+    cell: ({row}) => (
       <Button size="sm" variant="outline">
-        View
+        {row.original.Action}
       </Button>
     ),
   },
    {
-    accessorKey: "publisher", // was "reviewer"
+    accessorKey: "publisher", 
     header: "Publish",
-    cell: () => (
+    cell: ({row}) => (
       <Button size="sm" variant="default">
-        Publish
+        {row.original.publisher}
       </Button>
     ),
   },
@@ -291,7 +290,7 @@ export function DataTable({ data: initialData }) {
   return (
     <Tabs
       defaultValue="outline"
-      className="w-full flex-col justify-start gap-6"
+      className="w-full  flex-col justify-start gap-6"
     >
       <div className="flex items-center justify-between px-4 lg:px-6">
         <Label htmlFor="view-selector" className="sr-only">
@@ -300,9 +299,9 @@ export function DataTable({ data: initialData }) {
       </div>
       <TabsContent
         value="outline"
-        className="relative flex flex-col gap-4 overflow-auto px-4 lg:px-6"
+        className="relative flex flex-col gap-4 overflow-auto px-4 lg:px-1"
       >
-        <div className="overflow-hidden rounded-lg border">
+        <div className="overflow-x-auto max-w-full rounded-lg border">
           <DndContext
             collisionDetection={closestCenter}
             modifiers={[restrictToVerticalAxis]}
@@ -310,7 +309,7 @@ export function DataTable({ data: initialData }) {
             sensors={sensors}
             id={sortableId}
           >
-            <Table>
+            <Table className="min-w-[700px] max-w-full">
               <TableHeader className="bg-muted sticky top-0 z-10">
                 {table.getHeaderGroups().map((headerGroup) => (
                   <TableRow key={headerGroup.id}>

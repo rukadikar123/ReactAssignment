@@ -43,7 +43,7 @@ const data = {
   navMain: [
     {
       title: "Articles",
-      url: "articles",
+      url: "#",
       icon: GrArticle,
       isActive: true,
       items: [
@@ -53,7 +53,7 @@ const data = {
         },
         {
           title: "Generated Articles",
-          url: "generated-articles",
+          url: "#",
         },
         {
           title: "Keyword projects",

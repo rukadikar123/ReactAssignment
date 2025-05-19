@@ -1,12 +1,54 @@
-# React + Vite
+# React Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **React + Vite** application featuring a dashboard UI with sidebar navigation, article management, and data tables. It uses modern React patterns, shadcn/ui components, and Tailwind CSS for styling.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Sidebar Navigation:**  
+  Collapsible sidebar with navigation links for different sections (Articles, Auto Blog, Internal Links, etc.).  
 
-## Expanding the ESLint configuration
+- **Article Management:**  
+  - View "Generated Articles" in a responsive data table.
+  - Tab switcher for viewing Generated, Published, Scheduled, and Archived articles.
+  - Each article displays fields like title, category, word count, created date, action, and publisher.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+- **Responsive Data Table:**  
+  - Sortable and draggable rows.
+  - Pagination and rows-per-page selection.
+  - Responsive design with horizontal scrolling on small screens.
+
+
+- **Routing:**  
+  - Uses React Router for nested routes.
+  - Sidebar links update the main content area via `<Outlet />`.
+
+  
+- **Modern UI:**  
+  - Built with shadcn/ui and Tailwind CSS.
+  - Clean, minimal, and accessible design.
+
+
+
+## Tech Stack
+
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [React Router](https://reactrouter.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+
+
+## Getting Started
+
+1. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+   
+2. **Run the development server:**
+   ```sh
+   npm run dev
+   ```

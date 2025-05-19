@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Page />}>
           <Route path="generated-articles" element={<GeneratedArticles />} />
-          {/* Add more routes as needed */}
+         
         </Route>
       </Routes>
     </BrowserRouter>    </>;

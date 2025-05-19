@@ -1,12 +1,92 @@
 [
   {
-  "articleId": 1,
-  "title": "How to improve your skills",
-  "category": "Guide",
-  "words": "Generated",
-  "createdOn": "2024-05-19",
-  "Action": "12",
-  "status":"Generated",
-  "publisher": "Eddie Lake"
-}
+    "articleId": 1,
+    "title": "How to Improve Your Skills in League of Legends",
+    "category": "League of Legends [2240000]",
+    "words": "4575",
+    "createdOn": "20 hours ago",
+    "Action": "view",
+    "status": "Generated",
+    "publisher": "Ava Johnson"
+  },
+  {
+    "articleId": 2,
+    "title": "How to Master Last Hitting in League of Legends",
+    "category": "League of Legends [2240000]",
+    "words": "3480",
+    "createdOn": "21 hours ago",
+    "Action": "view",
+    "status": "Generated",
+    "publisher": "Noah Martinez"
+  },
+  {
+    "articleId": 3,
+    "title": "7 Tips for Better Teamplay in League of Legends",
+    "category": "League of Legends [2240000]",
+    "words": "2676",
+    "createdOn": "a day ago",
+    "Action": "view",
+    "status": "Generated",
+    "publisher": "Sophia Lee"
+  },
+  {
+    "articleId": 4,
+    "title": "Top Virtual Executive Assistance Services(2024)",
+    "category": "Virtual executive assistance [2900]",
+    "words": "2408",
+    "createdOn": "1 oct 2024",
+    "Action": "view",
+    "status": "Generated",
+    "publisher": "Liam Carter"
+  },
+  {
+    "articleId": 5,
+    "title": "Unlimitted Graphics Design Solutions",
+    "category": "unlimitted graphics design services[390]",
+    "words": "1793",
+    "createdOn": "---",
+    "Action": "view",
+    "status": "Generated",
+    "publisher": "Emma Nguyen"
+  },
+  {
+    "articleId": 6,
+    "title": "Top Amazing Payment Methods for Quick Access to Funds",
+    "category": "Amazing Payment Methods[3600]",
+    "words": "2647",
+    "createdOn": "---",
+    "Action": "view",
+    "status": "Generated",
+    "publisher": "James Patel"
+  },
+  {
+    "articleId": 7,
+    "title": "Backlinks 101: What are backlinks and Why they are important [free template]",
+    "category": "Backlinks[8100]",
+    "words": "2261",
+    "createdOn": "---",
+    "Action": "view",
+    "status": "Generated",
+    "publisher": "Isabella Wright"
+  },
+  {
+    "articleId": 8,
+    "title": "7 Leadings AI SEO Tools in 2024(Ranked & Compared)",
+    "category": "ai seo software[880]",
+    "words": "1543",
+    "createdOn": "---",
+    "Action": "view",
+    "status": "Generated",
+    "publisher": "Ethan Kim"
+  },
+  {
+    "articleId": 9,
+    "title": "Unlimitted Graphics Design Services Yo Can Rely on",
+    "category": "unlimitted graphics design services[390]",
+    "words": "1974",
+    "createdOn": "---",
+    "Action": "view",
+    "status": "Generated",
+    "publisher": "Mia Thompson"
+  }
 ]
