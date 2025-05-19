@@ -7,7 +7,7 @@
     "createdOn": "20 hours ago",
     "Action": "view",
     "status": "Generated",
-    "publisher": "Ava Johnson"
+    "publisher": "Ava"
   },
   {
     "articleId": 2,
@@ -17,7 +17,7 @@
     "createdOn": "21 hours ago",
     "Action": "view",
     "status": "Generated",
-    "publisher": "Noah Martinez"
+    "publisher": "Noah"
   },
   {
     "articleId": 3,
@@ -27,7 +27,7 @@
     "createdOn": "a day ago",
     "Action": "view",
     "status": "Generated",
-    "publisher": "Sophia Lee"
+    "publisher": "Sophia"
   },
   {
     "articleId": 4,
@@ -37,7 +37,7 @@
     "createdOn": "1 oct 2024",
     "Action": "view",
     "status": "Generated",
-    "publisher": "Liam Carter"
+    "publisher": "Liam"
   },
   {
     "articleId": 5,
@@ -47,7 +47,7 @@
     "createdOn": "---",
     "Action": "view",
     "status": "Generated",
-    "publisher": "Emma Nguyen"
+    "publisher": "Emma"
   },
   {
     "articleId": 6,
@@ -57,7 +57,7 @@
     "createdOn": "---",
     "Action": "view",
     "status": "Generated",
-    "publisher": "James Patel"
+    "publisher": "James"
   },
   {
     "articleId": 7,
@@ -67,7 +67,7 @@
     "createdOn": "---",
     "Action": "view",
     "status": "Generated",
-    "publisher": "Isabella Wright"
+    "publisher": "Isabella"
   },
   {
     "articleId": 8,
@@ -77,7 +77,7 @@
     "createdOn": "---",
     "Action": "view",
     "status": "Generated",
-    "publisher": "Ethan Kim"
+    "publisher": "Ethan"
   },
   {
     "articleId": 9,
@@ -87,6 +87,6 @@
     "createdOn": "---",
     "Action": "view",
     "status": "Generated",
-    "publisher": "Mia Thompson"
+    "publisher": "Mia"
   }
 ]
