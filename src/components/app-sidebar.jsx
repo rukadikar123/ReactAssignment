@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from "react";
 import { GrArticle } from "react-icons/gr";
 import { MdAutoAwesome } from "react-icons/md";
 import { RiLinksFill } from "react-icons/ri";
@@ -9,19 +9,17 @@ import { TbAffiliate } from "react-icons/tb";
 import { IoIosHelpCircle } from "react-icons/io";
 import { MdTipsAndUpdates } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
-import {
-  GalleryVerticalEnd,
-} from "lucide-react"
+import { GalleryVerticalEnd } from "lucide-react";
 
-import { NavMain } from "@/components/nav-main"
-import { TeamSwitcher } from "@/components/team-switcher"
+import { NavMain } from "@/components/nav-main";
+import { TeamSwitcher } from "@/components/team-switcher";
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
-} from "@/components/ui/sidebar"
+} from "@/components/ui/sidebar";
 
 // This is sample data.
 const data = {
@@ -36,7 +34,6 @@ const data = {
       logo: GalleryVerticalEnd,
       plan: "Enterprise",
     },
- 
   ],
   navMain: [
     {
@@ -46,8 +43,8 @@ const data = {
       isActive: true,
       items: [
         {
-         title: "Create Article",
-          url: 'create-article',
+          title: "Create Article",
+          url: "create-article",
         },
         {
           title: "Generated Articles",
@@ -62,109 +59,100 @@ const data = {
           url: "ai-keyword-to-article",
         },
         {
-         title: "Steal competitor Keyword",
+          title: "Steal competitor Keyword",
           url: "steal-competitor-keyword",
         },
         {
-           title: "Manual Keyword to article",
+          title: "Manual Keyword to article",
           url: "manual-keyword-to-article",
         },
         {
-           title: "Longtail keyword to article",
+          title: "Longtail keyword to article",
           url: "longtail-keyword-to-article",
         },
         {
-         title: "Article settings",
+          title: "Article settings",
           url: "article-settings",
         },
-       
       ],
     },
     {
-     title: "Auto Blog",
+      title: "Auto Blog",
       url: null,
       icon: MdAutoAwesome,
       isActive: true,
-      items: [
-      ]
+      items: [],
     },
     {
-     title: "Internal Links",
+      title: "Internal Links",
       url: null,
-     icon: RiLinksFill,
+      icon: RiLinksFill,
       isActive: true,
-      items: [
-      ]
+      items: [],
     },
     {
-     title: "Free Backlinks",
+      title: "Free Backlinks",
       url: null,
       icon: IoLinkSharp,
       isActive: true,
-      items: [
-      ]
+      items: [],
     },
     {
-     title: "Integrations",
+      title: "Integrations",
       url: null,
       icon: MdIntegrationInstructions,
       isActive: true,
-      items: [
-      ]
+      items: [],
     },
     {
-     title: "Subscription",
+      title: "Subscription",
       url: null,
       icon: MdSubscriptions,
       isActive: true,
-      items: [
-      ]
+      items: [],
     },
     {
-     title: "Affiliate Programm",
+      title: "Affiliate Programm",
       url: null,
-        icon: TbAffiliate,
+      icon: TbAffiliate,
       isActive: true,
-      items: [
-      ]
+      items: [],
     },
     {
-     title: "Help center",
+      title: "Help center",
       url: null,
-       icon: IoIosHelpCircle,
+      icon: IoIosHelpCircle,
       isActive: true,
-      items: [
-      ]
+      items: [],
     },
     {
-     title: "Updates",
+      title: "Updates",
       url: null,
-     icon: MdTipsAndUpdates,
+      icon: MdTipsAndUpdates,
       isActive: true,
-      items: [
-      ]
+      items: [],
     },
-    
   ],
+};
 
-}
-
-export function AppSidebar({
-  ...props
-}) {
+// AppSidebar component renders the sidebar UI
+export function AppSidebar({ ...props }) {
   return (
     <Sidebar collapsible="icon" {...props}>
+      {/* Header section with team switcher */}
       <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
+      {/* Main content section with navigation */}
       <SidebarContent>
         <NavMain items={data.navMain} />
       </SidebarContent>
       <hr />
+      {/* Footer with profile section */}
       <SidebarFooter>
         <div className="flex gap-2 hover:cursor-pointer items-center">
-          <CgProfile className='text-blue-600' />
-          
+          <CgProfile className="text-blue-600" />
+
           <p> Profile</p>
         </div>
       </SidebarFooter>
