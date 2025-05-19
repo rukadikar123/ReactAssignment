@@ -14,8 +14,6 @@ import {
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
-import { NavUser } from "@/components/nav-user"
 import { TeamSwitcher } from "@/components/team-switcher"
 import {
   Sidebar,
@@ -43,48 +41,48 @@ const data = {
   navMain: [
     {
       title: "Articles",
-      url: "#",
+      url: "/",
       icon: GrArticle,
       isActive: true,
       items: [
         {
          title: "Create Article",
-          url: '#',
+          url: 'create-article',
         },
         {
           title: "Generated Articles",
-          url: "#",
+          url: "/generated-articles",
         },
         {
           title: "Keyword projects",
-          url: "#",
+          url: "keyword-projects",
         },
         {
           title: "AI keyword to article",
-          url: "#",
+          url: "ai-keyword-to-article",
         },
         {
          title: "Steal competitor Keyword",
-          url: "#",
+          url: "steal-competitor-keyword",
         },
         {
            title: "Manual Keyword to article",
-          url: "#",
+          url: "manual-keyword-to-article",
         },
         {
            title: "Longtail keyword to article",
-          url: "#",
+          url: "longtail-keyword-to-article",
         },
         {
          title: "Article settings",
-          url: "#",
+          url: "article-settings",
         },
        
       ],
     },
     {
      title: "Auto Blog",
-      url: "#",
+      url: null,
       icon: MdAutoAwesome,
       isActive: true,
       items: [
@@ -92,7 +90,7 @@ const data = {
     },
     {
      title: "Internal Links",
-      url: "#",
+      url: null,
      icon: RiLinksFill,
       isActive: true,
       items: [
@@ -100,7 +98,7 @@ const data = {
     },
     {
      title: "Free Backlinks",
-      url: "#",
+      url: null,
       icon: IoLinkSharp,
       isActive: true,
       items: [
@@ -108,7 +106,7 @@ const data = {
     },
     {
      title: "Integrations",
-      url: "#",
+      url: null,
       icon: MdIntegrationInstructions,
       isActive: true,
       items: [
@@ -116,7 +114,7 @@ const data = {
     },
     {
      title: "Subscription",
-      url: "#",
+      url: null,
       icon: MdSubscriptions,
       isActive: true,
       items: [
@@ -124,7 +122,7 @@ const data = {
     },
     {
      title: "Affiliate Programm",
-      url: "#",
+      url: null,
         icon: TbAffiliate,
       isActive: true,
       items: [
@@ -132,7 +130,7 @@ const data = {
     },
     {
      title: "Help center",
-      url: "#",
+      url: null,
        icon: IoIosHelpCircle,
       isActive: true,
       items: [
@@ -140,7 +138,7 @@ const data = {
     },
     {
      title: "Updates",
-      url: "#",
+      url: null,
      icon: MdTipsAndUpdates,
       isActive: true,
       items: [
@@ -162,9 +160,11 @@ export function AppSidebar({
       <SidebarContent>
         <NavMain items={data.navMain} />
       </SidebarContent>
+      <hr />
       <SidebarFooter>
         <div className="flex gap-2 hover:cursor-pointer items-center">
           <CgProfile className='text-blue-600' />
+          
           <p> Profile</p>
         </div>
       </SidebarFooter>

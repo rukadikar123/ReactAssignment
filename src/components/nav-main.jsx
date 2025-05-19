@@ -1,5 +1,5 @@
 "use client";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import { ChevronRight } from "lucide-react";
 
@@ -30,11 +30,13 @@ export function NavMain({ items }) {
           >
             <SidebarMenuItem>
               <CollapsibleTrigger asChild>
-                <SidebarMenuButton tooltip={item.title}>
-                  {item.icon && <item.icon className="text-blue-600" />}
-                  <span>{item.title}</span>
-                  <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
-                </SidebarMenuButton>
+                <Link to={item?.url}>
+                  <SidebarMenuButton tooltip={item.title}>
+                    {item.icon && <item.icon className="text-blue-600" />}
+                    <span>{item.title}</span>
+                    <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+                  </SidebarMenuButton>
+                </Link>
               </CollapsibleTrigger>
               <CollapsibleContent>
                 <SidebarMenuSub>
@@ -42,17 +44,23 @@ export function NavMain({ items }) {
                     <SidebarMenuSubItem key={subItem.title}>
                       <SidebarMenuSubButton asChild>
                         {subItem.url ? (
-                          <NavLink
-                            to={subItem.url}
-                            end
-                            className={({ isActive }) =>
-                              isActive ? "font-semibold !text-blue-600" : ""
-                            }
-                          >
-                            <span>{subItem?.title}</span>
+                          <NavLink to={subItem.url} end>
+                            {({ isActive }) => (
+                              <span
+                                style={
+                                  isActive
+                                    ? { color: "#2563eb", fontWeight: 600 }
+                                    : {}
+                                }
+                              >
+                                {subItem.title}
+                              </span>
+                            )}
                           </NavLink>
                         ) : (
-                          <span>{subItem.title}</span>
+                          <span className="flex items-center text-base">
+                            {subItem.title}
+                          </span> // Add classes here
                         )}
                       </SidebarMenuSubButton>
                     </SidebarMenuSubItem>
